@@ -1,0 +1,7 @@
+{
+  "success": false,
+  "action": "add",
+  "indicator": "ZZZ Nonexistent Indicator 12345",
+  "entity_id": null,
+  "new_study_count": 0
+}

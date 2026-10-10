@@ -1,0 +1,14 @@
+{
+  "success": true,
+  "button_clicked": "Pine Save",
+  "has_errors": true,
+  "errors": [
+    {
+      "line": 3,
+      "column": 6,
+      "message": "Undeclared identifier \"undefined_variable\"",
+      "severity": 8
+    }
+  ],
+  "study_added": false
+}

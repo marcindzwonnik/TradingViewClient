@@ -1,0 +1,6 @@
+{
+  "success": true,
+  "issue_count": 0,
+  "diagnostics": [],
+  "note": "No static analysis issues found. Use `tv pine compile` against the open editor or `tv pine check` for a server-side compilation check."
+}

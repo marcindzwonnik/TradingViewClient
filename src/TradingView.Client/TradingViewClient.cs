@@ -10,6 +10,12 @@ public interface ITradingViewClient : IDisposable
     IChartApi Chart { get; }
 
     IDataApi Data { get; }
+
+    IPineApi Pine { get; }
+
+    IIndicatorApi Indicators { get; }
+
+    IReplayApi Replay { get; }
 }
 
 /// <inheritdoc cref="ITradingViewClient"/>
@@ -41,6 +47,9 @@ public sealed class TradingViewClient : ITradingViewClient
         Health = new HealthApi(executor);
         Chart = new ChartApi(executor);
         Data = new DataApi(executor);
+        Pine = new PineApi(executor);
+        Indicators = new IndicatorApi(executor);
+        Replay = new ReplayApi(executor);
     }
 
     public IHealthApi Health { get; }
@@ -48,6 +57,12 @@ public sealed class TradingViewClient : ITradingViewClient
     public IChartApi Chart { get; }
 
     public IDataApi Data { get; }
+
+    public IPineApi Pine { get; }
+
+    public IIndicatorApi Indicators { get; }
+
+    public IReplayApi Replay { get; }
 
     public void Dispose() => _ownedTransport?.Dispose();
 }

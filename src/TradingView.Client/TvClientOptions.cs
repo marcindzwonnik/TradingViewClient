@@ -35,4 +35,10 @@ public sealed class TvClientOptions
     /// <see cref="TvOperationFailedException"/>. When false, the typed result is returned instead.
     /// </summary>
     public bool ThrowOnOperationFailure { get; set; } = true;
+
+    /// <summary>
+    /// When true (default), Pine commands that fail with "Could not open Pine Editor" are retried once after
+    /// opening the editor panel (<c>tv ui panel pine-editor open</c>); the CLI is unreliable when the editor is closed.
+    /// </summary>
+    public bool AutoOpenPineEditor { get; set; } = true;
 }

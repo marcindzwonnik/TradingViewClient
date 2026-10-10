@@ -1,0 +1,161 @@
+{
+  "success": true,
+  "scripts": [
+    {
+      "id": "USER;00000000000000000000000000000000",
+      "name": "script-1",
+      "title": "script-1",
+      "version": "3.0",
+      "modified": 1512079544
+    },
+    {
+      "id": "USER;00000000000000000000000000000000",
+      "name": "script-2",
+      "title": "script-2",
+      "version": "4.0",
+      "modified": 1769784122
+    },
+    {
+      "id": "USER;00000000000000000000000000000000",
+      "name": "script-3",
+      "title": "script-3",
+      "version": "25.0",
+      "modified": 1775075687
+    },
+    {
+      "id": "USER;00000000000000000000000000000000",
+      "name": "script-4",
+      "title": "script-4",
+      "version": "2.0",
+      "modified": 1791379517
+    },
+    {
+      "id": "USER;00000000000000000000000000000000",
+      "name": "script-5",
+      "title": "script-5",
+      "version": "1.0",
+      "modified": 1512070915
+    },
+    {
+      "id": "USER;00000000000000000000000000000000",
+      "name": "script-6",
+      "title": "script-6",
+      "version": "2.0",
+      "modified": 1677348329
+    },
+    {
+      "id": "USER;00000000000000000000000000000000",
+      "name": "script-7",
+      "title": "script-7",
+      "version": "8.0",
+      "modified": 1574282647
+    },
+    {
+      "id": "USER;00000000000000000000000000000000",
+      "name": "script-8",
+      "title": "script-8",
+      "version": "4.0",
+      "modified": 1791358148
+    },
+    {
+      "id": "USER;00000000000000000000000000000000",
+      "name": "script-9",
+      "title": "script-9",
+      "version": "1.0",
+      "modified": 1791379417
+    },
+    {
+      "id": "USER;00000000000000000000000000000000",
+      "name": "script-10",
+      "title": "script-10",
+      "version": "2.0",
+      "modified": 1791465446
+    },
+    {
+      "id": "USER;00000000000000000000000000000000",
+      "name": "script-11",
+      "title": "script-11",
+      "version": "1.0",
+      "modified": 1778245638
+    },
+    {
+      "id": "USER;00000000000000000000000000000000",
+      "name": "script-12",
+      "title": "script-12",
+      "version": "8.0",
+      "modified": 1677322869
+    },
+    {
+      "id": "USER;00000000000000000000000000000000",
+      "name": "script-13",
+      "title": "script-13",
+      "version": "48.0",
+      "modified": 1677440246
+    },
+    {
+      "id": "USER;00000000000000000000000000000000",
+      "name": "script-14",
+      "title": "script-14",
+      "version": "42.0",
+      "modified": 1677341902
+    },
+    {
+      "id": "USER;00000000000000000000000000000000",
+      "name": "script-15",
+      "title": "script-15",
+      "version": "13.0",
+      "modified": 1574283535
+    },
+    {
+      "id": "USER;00000000000000000000000000000000",
+      "name": "script-16",
+      "title": "script-16",
+      "version": "58.0",
+      "modified": 1707826624
+    },
+    {
+      "id": "USER;00000000000000000000000000000000",
+      "name": "script-17",
+      "title": "script-17",
+      "version": "3.0",
+      "modified": 1707827493
+    },
+    {
+      "id": "USER;00000000000000000000000000000000",
+      "name": "script-18",
+      "title": "script-18",
+      "version": "2.0",
+      "modified": 1773609953
+    },
+    {
+      "id": "USER;00000000000000000000000000000000",
+      "name": "script-19",
+      "title": "script-19",
+      "version": "3.0",
+      "modified": 1773610770
+    },
+    {
+      "id": "USER;00000000000000000000000000000000",
+      "name": "script-20",
+      "title": "script-20",
+      "version": "2.0",
+      "modified": 1774523357
+    },
+    {
+      "id": "USER;00000000000000000000000000000000",
+      "name": "script-21",
+      "title": "script-21",
+      "version": "1.0",
+      "modified": 1791297008
+    },
+    {
+      "id": "USER;00000000000000000000000000000000",
+      "name": "script-22",
+      "title": "script-22",
+      "version": "3.0",
+      "modified": 1791462723
+    }
+  ],
+  "count": 22,
+  "source": "internal_api"
+}

@@ -315,3 +315,19 @@ Wynik zrzutu `tools/Capture-Fixtures.ps1` (TradingView Desktop, CLI `3d2cbae`) i
 - **`data depth`** bez panelu DOM: exit 1, `{"success":false,"error":"DOM / Depth of Market panel not found."}`.
 - **`search`**: wypisuje kompletny JSON, po czym Node na Windows kończy się asercją libuv (`UV_HANDLE_CLOSING`), kod wyjścia **0xC0000409** (`-1073740791`). Klient traktuje taki wynik jako sukces, gdy stdout zawiera poprawny JSON.
 - **Status**: pole `update` bierze `git rev-parse HEAD` z **katalogu roboczego** procesu, więc klient uruchamia CLI w katalogu jego repozytorium.
+
+### Dodatkowe korekty z etapu 3 (Pine, Indicators, Replay, mutacje wykresu)
+
+- **`pine check`** też kończy się crashem Node (0xC0000409) po wypisaniu kompletnego JSON-a; klient go toleruje (jak przy `search`).
+- **`pine new|set|get|compile|errors|console|save`** wymagają otwartego edytora Pine. Przy zamkniętym edytorze CLI zawodzi z `Could not open Pine Editor.` (exit 1) albo `Ensure Pine Editor is open`. Klient otwiera panel (`tv ui panel pine-editor open`) i ponawia komendę raz (`TvClientOptions.AutoOpenPineEditor`).
+- **`pine compile`** nowego, niezapisanego skryptu klika `Pine Save` (`button_clicked: "Pine Save"`, `study_added: false`) i zostawia na ekranie modal „Save script”. Skrypt nie trafia na wykres ani do konta, dopóki ktoś nie zatwierdzi dialogu. `has_errors`/`errors` działają także w tym trybie (`severity` 8 = error).
+- **`pine save`** nie został zrzucony (zapisuje skrypt na koncie); model oparty na kontrakcie.
+- **`pine console`**: `entries[].timestamp` bywa `null`, a `message` to cały tekst panelu sklejony w jeden blok (może się powtarzać w kilku wpisach).
+- **`pine list`**: `id` ma postać `USER;<base62>` (nie hex), `modified` to unix sekundy, `version` to string (`"3.0"`).
+- **`pine analyze`** dla poprawnego skryptu: `issue_count: 0` plus `note`. Wykrywa m.in. indeks poza tablicą (error), pustą tablicę (warning), `strategy.entry` bez `strategy()` (error).
+- **`pine check`** dla błędu: `errors[]` z `line/column/end_line/end_column/message`; komunikat bywa szablonem (`Undeclared identifier "{identifier}"`).
+- **`indicator add`**: wymaga pełnej nazwy TradingView (`Relative Strength Index`, `Volume`). `Moving Average Exponential` nie utworzyło wskaźnika (`success:false`, `entity_id:null`, bez pola `error`). Przy `-i` odpowiedź zawiera `inputs.applied` i `inputs.unknown_inputs`. Identyfikatory wejść RSI to `length` i `source` (nie `in_N`).
+- **`symbol X`**: `chart_ready` bywa `false`, mimo że symbol się zmienił (np. `NASDAQ:AAPL`); klient zwraca to bez wyjątku.
+- **`replay start`** bez daty startuje od najstarszej dostępnej daty (na wykresie 5 min: 2021-10-10), `current_date` w unix sekundach. `position` i `realized_pnl` zostają `null` także po `trade buy` (API handlu replay ich nie raportuje).
+- **`replay autoplay -s N`** zmienia opóźnienie na stałe (widoczne potem w `status.autoplay_delay`), a samo `autoplay` przełącza włączone/wyłączone.
+- **`ui panel pine-editor close`** zgłasza `performed: "closed"`, ale nie zamyka edytora; zamyka go kliknięcie przycisku `aria-label=Close` (`ui click -b aria-label -v Close`).

@@ -2,7 +2,7 @@
 
 Silnie typowany klient .NET 10 (`TradingView.Client`) dla [`tradingview-cli`](https://github.com/tradesdontlie/tradingview-cli) – CLI `tv` sterującego lokalnym TradingView Desktop przez CDP.
 
-Status: etapy 1-2 z 5 gotowe (transport, błędy, JSON, Health, Chart, Data). Zobacz:
+Status: etapy 1-3 z 5 gotowe (transport, błędy, JSON, Health, Chart, Data, Pine, Indicators, Replay). Zobacz:
 
 - [`docs/PLAN.md`](docs/PLAN.md) – zaakceptowany plan implementacji,
 - [`docs/tv-cli-contract.md`](docs/tv-cli-contract.md) – katalog kształtów JSON każdej komendy `tv` (wejście do modeli C#).
@@ -16,8 +16,12 @@ Console.WriteLine($"{status.ChartSymbol} @ {status.ChartResolution}");
 
 var bars = await tv.Data.GetOhlcvAsync(50);
 await tv.Chart.SetTimeframeAsync(Timeframe.Hours(4));
+
+var rsi = await tv.Indicators.AddAsync("Relative Strength Index", new Dictionary<string, object?> { ["length"] = 7 });
+var check = await tv.Pine.CheckAsync(File.ReadAllText("script.pine"));
 ```
 
 Testy offline: `dotnet test --project tests/TradingView.Client.Tests`.
 Testy na żywo (wymagają TradingView z CDP; inaczej są pomijane): `dotnet test --project tests/TradingView.Client.IntegrationTests`.
-Zrzut fixtur: `powershell -File tools/Capture-Fixtures.ps1` (domyślnie tylko komendy tylko-do-odczytu).
+Testy mutujące (zmieniają wykres, po sobie sprzątają): `TV_INTEGRATION_MUTATING=1`.
+Zrzut fixtur: `powershell -File tools/Capture-Fixtures.ps1` (domyślnie tylko komendy tylko-do-odczytu; `-IncludeMutating` uruchamia scenariusze zmieniające wykres).

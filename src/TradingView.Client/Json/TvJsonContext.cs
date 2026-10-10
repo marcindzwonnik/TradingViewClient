@@ -40,6 +40,31 @@ namespace TradingView.Client;
 [JsonSerializable(typeof(EquityResult))]
 [JsonSerializable(typeof(DepthResult))]
 [JsonSerializable(typeof(IndicatorInfoResult))]
+// Pine
+[JsonSerializable(typeof(PineSourceResult))]
+[JsonSerializable(typeof(PineSetSourceResult))]
+[JsonSerializable(typeof(PineCompileResult))]
+[JsonSerializable(typeof(PineRawCompileResult))]
+[JsonSerializable(typeof(PineAnalyzeResult))]
+[JsonSerializable(typeof(PineCheckResult))]
+[JsonSerializable(typeof(PineSaveResult))]
+[JsonSerializable(typeof(PineNewResult))]
+[JsonSerializable(typeof(PineOpenResult))]
+[JsonSerializable(typeof(PineListResult))]
+[JsonSerializable(typeof(PineErrorsResult))]
+[JsonSerializable(typeof(PineConsoleResult))]
+// Indicators
+[JsonSerializable(typeof(IndicatorAddResult))]
+[JsonSerializable(typeof(IndicatorRemoveResult))]
+[JsonSerializable(typeof(IndicatorVisibilityResult))]
+[JsonSerializable(typeof(IndicatorSetInputsResult))]
+// Replay
+[JsonSerializable(typeof(ReplayStartResult))]
+[JsonSerializable(typeof(ReplayStepResult))]
+[JsonSerializable(typeof(ReplayStopResult))]
+[JsonSerializable(typeof(ReplayStatusResult))]
+[JsonSerializable(typeof(ReplayAutoplayResult))]
+[JsonSerializable(typeof(ReplayTradeResult))]
 public sealed partial class TvJsonContext : JsonSerializerContext
 {
 }

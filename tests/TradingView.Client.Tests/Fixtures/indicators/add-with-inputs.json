@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "action": "add",
+  "indicator": "Relative Strength Index",
+  "entity_id": "PCeopW",
+  "new_study_count": 1,
+  "inputs": {
+    "applied": {
+      "length": 7
+    },
+    "unknown_inputs": [
+      "no_such_input"
+    ]
+  }
+}
