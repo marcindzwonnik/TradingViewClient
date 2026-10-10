@@ -1,0 +1,24 @@
+{
+  "success": true,
+  "action": "new_tab_opened",
+  "note": "Tab is on the layout picker. Call tab_new with layout: \"new\" or a saved layout name to open a chart in it.",
+  "tab_count": 2,
+  "tabs": [
+    {
+      "index": 0,
+      "id": "00000000000000000000000000000000",
+      "title": "New tab",
+      "url": "file:///C:/Program%20Files/TradingView/resources/app.asar/app/new-tab/index.html?rendererInitialData=%7B%22userId%22%3A0%2C%22tabId%22%3A%2200000000-0000-0000-0000-000000000000%22%2C%22remoteServiceInstanceId%22%3A%22af7f1157-tvd%3Atabbed-window%22%7D",
+      "chart_id": null,
+      "is_chart": false
+    },
+    {
+      "index": 1,
+      "id": "00000000000000000000000000000000",
+      "title": "TradingView",
+      "url": "https://www.tradingview.com/chart/XXXXXXXX/",
+      "chart_id": "XXXXXXXX",
+      "is_chart": true
+    }
+  ]
+}

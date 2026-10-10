@@ -1,0 +1,44 @@
+{
+    "success":  true,
+    "count":  5,
+    "source":  "dom_rows",
+    "list_id":  1,
+    "list_name":  "Watchlist",
+    "symbols":  [
+                    {
+                        "symbol":  "TVC:SPX",
+                        "last":  "7,811.54",
+                        "change":  "46.18",
+                        "change_percent":  "0.59%",
+                        "volume":  null
+                    },
+                    {
+                        "symbol":  "CME_MINI:ES1!",
+                        "last":  "7,859.75",
+                        "change":  "43.50",
+                        "change_percent":  "0.56%",
+                        "volume":  "1.08 M"
+                    },
+                    {
+                        "symbol":  "NYMEX:CL1!",
+                        "last":  "91.85",
+                        "change":  "0.36",
+                        "change_percent":  "0.39%",
+                        "volume":  "203.48 K"
+                    },
+                    {
+                        "symbol":  "TVC:US10Y",
+                        "last":  "5.242",
+                        "change":  "0.007",
+                        "change_percent":  "0.13%",
+                        "volume":  null
+                    },
+                    {
+                        "symbol":  "IBKR:USDPLN",
+                        "last":  "3.91785",
+                        "change":  "0.01323",
+                        "change_percent":  "0.34%",
+                        "volume":  null
+                    }
+                ]
+}

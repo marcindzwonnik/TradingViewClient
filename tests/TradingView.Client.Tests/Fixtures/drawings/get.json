@@ -1,0 +1,28 @@
+{
+  "success": true,
+  "entity_id": "ZeQbY1",
+  "available_methods": [],
+  "points": [
+    {
+      "price": 7866,
+      "time": 1791579300
+    }
+  ],
+  "properties": {
+    "linecolor": "rgba(242, 54, 69, 1)",
+    "textcolor": "rgba(0, 0, 0, 1)",
+    "linewidth": 2,
+    "linestyle": 0,
+    "showPrice": true,
+    "fontsize": 12,
+    "bold": false,
+    "italic": false,
+    "horzLabelsAlign": "center",
+    "vertLabelsAlign": "top",
+    "text": "",
+    "frozen": false,
+    "visible": true
+  },
+  "selectable": true,
+  "name": "horizontal_line"
+}

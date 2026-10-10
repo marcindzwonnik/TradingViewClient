@@ -65,6 +65,44 @@ namespace TradingView.Client;
 [JsonSerializable(typeof(ReplayStatusResult))]
 [JsonSerializable(typeof(ReplayAutoplayResult))]
 [JsonSerializable(typeof(ReplayTradeResult))]
+// Drawing
+[JsonSerializable(typeof(DrawShapeResult))]
+[JsonSerializable(typeof(DrawingListResult))]
+[JsonSerializable(typeof(DrawingDetailsResult))]
+[JsonSerializable(typeof(DrawingRemoveResult))]
+[JsonSerializable(typeof(DrawingClearResult))]
+// Alerts
+[JsonSerializable(typeof(AlertListResult))]
+[JsonSerializable(typeof(AlertCreateResult))]
+[JsonSerializable(typeof(AlertDeleteResult))]
+// Watchlist
+[JsonSerializable(typeof(WatchlistResult))]
+[JsonSerializable(typeof(WatchlistAddResult))]
+[JsonSerializable(typeof(WatchlistAddBulkResult))]
+[JsonSerializable(typeof(WatchlistRemoveResult))]
+// Layout/Pane/Tab/Screenshot
+[JsonSerializable(typeof(LayoutListResult))]
+[JsonSerializable(typeof(LayoutSwitchResult))]
+[JsonSerializable(typeof(PaneListResult))]
+[JsonSerializable(typeof(PaneLayoutResult))]
+[JsonSerializable(typeof(PaneFocusResult))]
+[JsonSerializable(typeof(PaneSymbolResult))]
+[JsonSerializable(typeof(TabListResult))]
+[JsonSerializable(typeof(TabNewResult))]
+[JsonSerializable(typeof(TabCloseResult))]
+[JsonSerializable(typeof(TabSwitchResult))]
+[JsonSerializable(typeof(ScreenshotResult))]
+// Ui
+[JsonSerializable(typeof(UiClickResult))]
+[JsonSerializable(typeof(UiHoverResult))]
+[JsonSerializable(typeof(UiKeyResult))]
+[JsonSerializable(typeof(UiScrollResult))]
+[JsonSerializable(typeof(UiFindResult))]
+[JsonSerializable(typeof(UiEvalResult))]
+[JsonSerializable(typeof(UiTypeResult))]
+[JsonSerializable(typeof(UiPanelResult))]
+[JsonSerializable(typeof(UiFullscreenResult))]
+[JsonSerializable(typeof(UiMouseResult))]
 public sealed partial class TvJsonContext : JsonSerializerContext
 {
 }

@@ -331,3 +331,19 @@ Wynik zrzutu `tools/Capture-Fixtures.ps1` (TradingView Desktop, CLI `3d2cbae`) i
 - **`replay start`** bez daty startuje od najstarszej dostępnej daty (na wykresie 5 min: 2021-10-10), `current_date` w unix sekundach. `position` i `realized_pnl` zostają `null` także po `trade buy` (API handlu replay ich nie raportuje).
 - **`replay autoplay -s N`** zmienia opóźnienie na stałe (widoczne potem w `status.autoplay_delay`), a samo `autoplay` przełącza włączone/wyłączone.
 - **`ui panel pine-editor close`** zgłasza `performed: "closed"`, ale nie zamyka edytora; zamyka go kliknięcie przycisku `aria-label=Close` (`ui click -b aria-label -v Close`).
+
+### Dodatkowe korekty z etapu 4 (Drawings, Alerts, Watchlist, Layouts, Panes, Tabs, Screenshot, Ui)
+
+- **Wartości liczbowe w opcjach**: używamy formy `--price=-5`, `--text=-x`, `--message=--x`, bo `parseArgs` upstreamu nie odróżnia wartości zaczynających się od `-` od opcji.
+- **`draw shape`**: nie waliduje nazwy kształtu. Potwierdzone działanie: `horizontal_line, horizontal_ray, vertical_line, trend_line, ray, extended, arrow, rectangle, circle, ellipse, triangle, parallel_channel, fib_retracement, long_position, short_position, text, callout, note, price_label, flag`. `draw get` przyciąga `points[].time` do czasu najbliższego baru, a `properties` ma zestaw kluczy zależny od kształtu.
+- **`alert list`**: `condition` to obiekt o zmiennym kształcie, `created`/`expiration` to ISO 8601 (`2026-10-10T20:34:16Z`), `last_fired` bywa `null`. `alert create` zwraca `condition` znormalizowane (`cross|greater|less`).
+- **`alert delete --id N`** zgłasza `deleted_count: 1` także dla nieistniejącego id. `delete --all` kasuje WSZYSTKIE alerty konta i nie jest nigdzie wywoływane w testach na żywo.
+- **`watchlist add`/`add-bulk`** nie weryfikują symbolu: `NOPE:NOSUCH123` zostaje dodane i raportowane jako sukces. `get` zwraca stringi wyświetlane (`"7,811.54"`, `"202.13 K"`); `source: "empty"` pojawia się, gdy panel watchlisty nie jest aktywnym widżetem prawego panelu.
+- **`layout list`**: `id` to liczba, `modified` to data `YYYY-MM-DD`. `layout switch` zwraca `unsaved_dialog_dismissed: true`, gdy odrzucił pytanie o niezapisane zmiany.
+- **`pane layout`**: po zmniejszeniu układu `panes` nadal zawiera nieaktualne panele (`chart_count` jest miarodajny), a `pane focus` zwraca `total_panes` liczone razem z nimi. Symbol bywa rozwiązywany do innej giełdy (`NASDAQ:AAPL` → `BATS:AAPL`).
+- **`tab new`** i **`tab close`** również kończą się crashem Node (0xC0000409) po kompletnym JSON-ie. Nowa karta jest wstawiana na indeks 0 jako `New tab` (`is_chart: false`). `tab list` pomija karty niebędące wykresem ani `New tab` (np. „Stock Heatmap”).
+- **Upstreamowy błąd `tab close`/`tab switch`**: po zamknięciu karty TradingView aktywuje sąsiednią (u nas „Stock Heatmap”), a `tab switch 0` zgłasza sukces, ale nie aktywuje karty z wykresem, bo każda karta raportuje `visibilityState: visible`. Karta z wykresem w tle sprawia, że `screenshot` wisi bez końca (klient kończy to `TvTimeoutException`). Karta wraca po kliknięciu w pasku kart powłoki. Dlatego testy na żywo nie zamykają kart.
+- **`ui mouse X Y`** i współrzędne z `ui find`/`hover` są w pikselach CSS, nie w pikselach zrzutu ekranu (dla `devicePixelRatio` 1.25 zrzut jest większy o 25%).
+- **`ui panel watchlist`** przełącza prawy panel; otwiera ten widżet, który był ostatnio aktywny (u nas „Fundamental Graphs”). `ui panel pine-editor close` nie zamyka edytora.
+- **`ui eval`** zwraca `{"success":true}` bez pola `result` dla `undefined`.
+- **`screenshot`**: zapisuje do `<repo CLI>/screenshots/` (`tvclient_fixture.png`), `-o` bez rozszerzenia.

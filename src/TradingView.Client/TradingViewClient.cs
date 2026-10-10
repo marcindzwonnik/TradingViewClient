@@ -16,6 +16,22 @@ public interface ITradingViewClient : IDisposable
     IIndicatorApi Indicators { get; }
 
     IReplayApi Replay { get; }
+
+    IDrawingApi Drawings { get; }
+
+    IAlertApi Alerts { get; }
+
+    IWatchlistApi Watchlist { get; }
+
+    ILayoutApi Layouts { get; }
+
+    IPaneApi Panes { get; }
+
+    ITabApi Tabs { get; }
+
+    IScreenshotApi Screenshots { get; }
+
+    IUiApi Ui { get; }
 }
 
 /// <inheritdoc cref="ITradingViewClient"/>
@@ -50,6 +66,14 @@ public sealed class TradingViewClient : ITradingViewClient
         Pine = new PineApi(executor);
         Indicators = new IndicatorApi(executor);
         Replay = new ReplayApi(executor);
+        Drawings = new DrawingApi(executor);
+        Alerts = new AlertApi(executor);
+        Watchlist = new WatchlistApi(executor);
+        Layouts = new LayoutApi(executor);
+        Panes = new PaneApi(executor);
+        Tabs = new TabApi(executor);
+        Screenshots = new ScreenshotApi(executor);
+        Ui = new UiApi(executor);
     }
 
     public IHealthApi Health { get; }
@@ -63,6 +87,22 @@ public sealed class TradingViewClient : ITradingViewClient
     public IIndicatorApi Indicators { get; }
 
     public IReplayApi Replay { get; }
+
+    public IDrawingApi Drawings { get; }
+
+    public IAlertApi Alerts { get; }
+
+    public IWatchlistApi Watchlist { get; }
+
+    public ILayoutApi Layouts { get; }
+
+    public IPaneApi Panes { get; }
+
+    public ITabApi Tabs { get; }
+
+    public IScreenshotApi Screenshots { get; }
+
+    public IUiApi Ui { get; }
 
     public void Dispose() => _ownedTransport?.Dispose();
 }

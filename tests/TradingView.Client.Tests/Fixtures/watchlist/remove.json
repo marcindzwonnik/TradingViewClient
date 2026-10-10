@@ -1,0 +1,15 @@
+{
+  "success": true,
+  "removed": [
+    "NASDAQ:MSFT",
+    "NASDAQ:NVDA",
+    "NASDAQ:AMD"
+  ],
+  "skipped": [
+    "NASDAQ:ZZZNOTINLIST"
+  ],
+  "verified": true,
+  "list_id": 1,
+  "list_name": "Watchlist",
+  "api": "rest"
+}

@@ -1,0 +1,8 @@
+{
+  "success": true,
+  "layout": "Layout 1",
+  "layout_id": 1001,
+  "source": "internal_api",
+  "action": "switched",
+  "unsaved_dialog_dismissed": true
+}

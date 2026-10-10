@@ -182,11 +182,22 @@ public class PineIndicatorReplayIntegrationTests
         Live.SkipUnlessMutating();
         using var tv = await Client();
 
-        var set = await tv.Pine.SetSourceAsync(ValidScript, Ct);
-        var get = await tv.Pine.GetSourceAsync(Ct);
+        try
+        {
+            var set = await tv.Pine.SetSourceAsync(ValidScript, Ct);
+            var get = await tv.Pine.GetSourceAsync(Ct);
 
-        Assert.Equal(4, set.LinesSet);
-        Assert.Equal(ValidScript.TrimEnd('\n'), get.Source.TrimEnd('\n'));
+            Assert.Equal(4, set.LinesSet);
+            Assert.Equal(ValidScript.TrimEnd('\n'), get.Source.TrimEnd('\n'));
+        }
+        finally
+        {
+            // `ui panel pine-editor close` does not reliably close the editor; its Close button does.
+            if ((await tv.Health.GetUiStateAsync(Ct)).PineEditor?.Open == true)
+            {
+                await tv.Ui.ClickAsync(UiSelector.AriaLabel, "Close", Ct);
+            }
+        }
     }
 
     [Fact]

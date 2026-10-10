@@ -1,0 +1,9 @@
+{
+  "success": true,
+  "source": "internal_api",
+  "symbol": "CME_MINI:ES1!",
+  "price": 11799,
+  "condition": "greater",
+  "message": "tvclient-fixture",
+  "alert_id": 5817021868
+}

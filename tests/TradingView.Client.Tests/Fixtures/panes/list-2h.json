@@ -1,0 +1,29 @@
+{
+  "success": true,
+  "layout": "2h",
+  "layout_name": "2 horizontal",
+  "chart_count": 2,
+  "active_index": 0,
+  "panes": [
+    {
+      "index": 0,
+      "symbol": "CME_MINI:ES1!",
+      "resolution": "5"
+    },
+    {
+      "index": 1,
+      "symbol": "BATS:AAPL",
+      "resolution": "5"
+    },
+    {
+      "index": 2,
+      "symbol": "CME_MINI:ES1!",
+      "resolution": "5"
+    },
+    {
+      "index": 3,
+      "symbol": "CME_MINI:ES1!",
+      "resolution": "5"
+    }
+  ]
+}
