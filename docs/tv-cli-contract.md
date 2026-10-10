@@ -299,3 +299,19 @@ type ApiProbe = { available: boolean, path?: string, methodCount?: number /*came
   - dalej layout jest rozszerzany w kolejności `s, 2h, 3h, 4, 6, 8, 10, 12, 14, 16`;
   - na końcu otwierane są nowe karty.
   - Panele i karty **zostają otwarte** po zakończeniu streamu.
+
+---
+
+## Korekty potwierdzone fixturami z żywego TradingView
+
+Wynik zrzutu `tools/Capture-Fixtures.ps1` (TradingView Desktop, CLI `3d2cbae`) i testów integracyjnych. Te punkty zastępują opis powyżej.
+
+- **`chart_type` / `chartType` / `type_num`** mogą przyjmować wartości spoza 0–9 (na testowym wykresie: `19`). `tv type` wtedy zwraca w `chart_type` **liczbę**, nie nazwę. Modele trzymają surowe `ChartTypeId`/`TypeNum`; `ChartType` (enum) jest tylko dla 0–9.
+- **`range` → `bars_range`** to unix **sekundy** (czas pierwszego i ostatniego załadowanego baru), a nie indeksy barów.
+- **`ohlcv --summary`**: klucz to `last_5_bars` (nie `last5_bars`).
+- **`discover`**: klucze w `apis` są camelCase (`chartApi`, `chartWidgetCollection`, ...), `methodCount` też.
+- **`values`**: `studies[].inputs` zawiera `text` – zaszyfrowane źródło skryptów Pine użytkownika, oraz `pineId` (`USER;...`). Skrypt zrzutu maskuje oba pola.
+- **`data strategy|trades|equity`** bez strategii na wykresie: exit 0, `success:false`, `error: "No strategy found on chart..."`.
+- **`data depth`** bez panelu DOM: exit 1, `{"success":false,"error":"DOM / Depth of Market panel not found."}`.
+- **`search`**: wypisuje kompletny JSON, po czym Node na Windows kończy się asercją libuv (`UV_HANDLE_CLOSING`), kod wyjścia **0xC0000409** (`-1073740791`). Klient traktuje taki wynik jako sukces, gdy stdout zawiera poprawny JSON.
+- **Status**: pole `update` bierze `git rev-parse HEAD` z **katalogu roboczego** procesu, więc klient uruchamia CLI w katalogu jego repozytorium.

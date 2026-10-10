@@ -57,7 +57,7 @@ public sealed class CliProcessTransport : ITvTransport, IDisposable
                 var stdOut = await stdOutTask.ConfigureAwait(false);
                 var stdErr = await stdErrTask.ConfigureAwait(false);
                 _logger.LogDebug("tv {Command} exited with {ExitCode}", command, process.ExitCode);
-                return new TvRawResult(process.ExitCode, stdOut, stdErr);
+                return new TvRawResult(NormalizeExitCode(process.ExitCode, stdOut, command), stdOut, stdErr);
             }
             catch (OperationCanceledException)
             {
@@ -112,6 +112,31 @@ public sealed class CliProcessTransport : ITvTransport, IDisposable
     }
 
     public void Dispose() => _concurrency.Dispose();
+
+    /// <summary>
+    /// Windows exit code 0xC0000409 (STATUS_STACK_BUFFER_OVERRUN) that Node produces when libuv asserts at shutdown.
+    /// Upstream <c>tv search</c> hits it every time after printing its complete JSON.
+    /// </summary>
+    internal const int NodeShutdownCrashExitCode = unchecked((int)0xC0000409);
+
+    private int NormalizeExitCode(int exitCode, string stdOut, TvCommand command)
+    {
+        if (exitCode != NodeShutdownCrashExitCode || string.IsNullOrWhiteSpace(stdOut))
+        {
+            return exitCode;
+        }
+
+        try
+        {
+            using var document = System.Text.Json.JsonDocument.Parse(stdOut);
+            _logger.LogWarning("tv {Command} crashed while exiting (0xC0000409) after printing complete JSON; treating it as success", command);
+            return 0;
+        }
+        catch (System.Text.Json.JsonException)
+        {
+            return exitCode;
+        }
+    }
 
     private Process StartProcess(TvCommand command)
     {

@@ -1,0 +1,25 @@
+{
+  "success": true,
+  "study_count": 1,
+  "studies": [
+    {
+      "name": "Liquidity 2.0 [WALCL-RRP-TGA + WRESBAL + SOFR] (D1 Fix)",
+      "tables": [
+        {
+          "rows": [
+            "Mode | D1 Strict",
+            "Net Liquidity | 5866972000000.00",
+            "WRESBAL | 3029659000000.00",
+            "SOFR | 3.75",
+            "Structural | NaN",
+            "Tactical | -0.32",
+            "Composite | NaN",
+            "Confidence | 0",
+            "Regime | NEUTRAL",
+            "Div | None"
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "success": true,
+  "symbol": "ES1!",
+  "full_name": "CME_MINI:ES1!",
+  "exchange": "CME",
+  "description": "E-mini S&P 500 Futures",
+  "type": "futures",
+  "pro_name": "CME_MINI:ES1!",
+  "typespecs": [
+    "continuous",
+    "mini",
+    "synthetic"
+  ],
+  "resolution": "5",
+  "chart_type": 19
+}

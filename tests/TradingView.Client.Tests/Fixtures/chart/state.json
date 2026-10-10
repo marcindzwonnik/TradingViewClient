@@ -1,0 +1,52 @@
+{
+  "success": true,
+  "symbol": "CME_MINI:ES1!",
+  "resolution": "5",
+  "chartType": 19,
+  "studies": [
+    {
+      "id": "e6NNI2",
+      "name": "VIX1D 0DTE (bez dryfu)"
+    },
+    {
+      "id": "TmG4z7",
+      "name": "Auto trendlines"
+    },
+    {
+      "id": "6FMdJz",
+      "name": "Volume Weighted Average Price"
+    },
+    {
+      "id": "cjAZ2s",
+      "name": "Simple Moving Average"
+    },
+    {
+      "id": "BbdnCC",
+      "name": "Linear Regression Channel"
+    },
+    {
+      "id": "dOctPe",
+      "name": "Moving Average Exponential"
+    },
+    {
+      "id": "SuoJDw",
+      "name": "Licznik Świec US v6 (Fix)"
+    },
+    {
+      "id": "mRNbdG",
+      "name": "Visible range volume profile"
+    },
+    {
+      "id": "OvOd1h",
+      "name": "Auto anchored volume profile"
+    },
+    {
+      "id": "gatRFv",
+      "name": "Session volume profile"
+    },
+    {
+      "id": "ZCh7uG",
+      "name": "Liquidity 2.0 [WALCL-RRP-TGA + WRESBAL + SOFR] (D1 Fix)"
+    }
+  ]
+}

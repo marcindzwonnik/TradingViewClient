@@ -18,6 +18,36 @@ internal static class Fixtures
         ["health/status"] = TvJsonContext.Default.StatusResult,
         ["health/discover"] = TvJsonContext.Default.DiscoverResult,
         ["health/ui-state"] = TvJsonContext.Default.UiStateResult,
+        ["chart/state"] = TvJsonContext.Default.ChartStateResult,
+        ["chart/symbol"] = TvJsonContext.Default.SymbolResult,
+        ["chart/timeframe"] = TvJsonContext.Default.TimeframeResult,
+        ["chart/type"] = TvJsonContext.Default.ChartTypeResult,
+        ["chart/info"] = TvJsonContext.Default.SymbolInfoResult,
+        ["chart/search"] = TvJsonContext.Default.SymbolSearchResult,
+        ["chart/range"] = TvJsonContext.Default.VisibleRangeResult,
+        ["data/quote"] = TvJsonContext.Default.QuoteResult,
+        ["data/ohlcv"] = TvJsonContext.Default.OhlcvResult,
+        ["data/ohlcv-summary"] = TvJsonContext.Default.OhlcvSummaryResult,
+        ["data/values"] = TvJsonContext.Default.StudyValuesResult,
+        ["data/lines"] = TvJsonContext.Default.PineLinesResult,
+        ["data/lines-verbose"] = TvJsonContext.Default.PineLinesResult,
+        ["data/labels"] = TvJsonContext.Default.PineLabelsResult,
+        ["data/labels-verbose"] = TvJsonContext.Default.PineLabelsResult,
+        ["data/tables"] = TvJsonContext.Default.PineTablesResult,
+        ["data/boxes"] = TvJsonContext.Default.PineBoxesResult,
+        ["data/boxes-verbose"] = TvJsonContext.Default.PineBoxesResult,
+        ["data/strategy"] = TvJsonContext.Default.StrategyResultsResult,
+        ["data/trades"] = TvJsonContext.Default.TradesResult,
+        ["data/equity"] = TvJsonContext.Default.EquityResult,
+        ["data/indicator"] = TvJsonContext.Default.IndicatorInfoResult,
+    };
+
+    /// <summary>Fixtures captured from a chart that has no strategy: the CLI answers exit 0 with <c>success: false</c>.</summary>
+    public static IReadOnlySet<string> SoftFailures { get; } = new HashSet<string>
+    {
+        "data/strategy",
+        "data/trades",
+        "data/equity",
     };
 
     public static TheoryData<string> AllJsonFixtures()

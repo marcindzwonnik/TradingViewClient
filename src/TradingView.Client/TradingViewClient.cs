@@ -6,6 +6,10 @@ namespace TradingView.Client;
 public interface ITradingViewClient : IDisposable
 {
     IHealthApi Health { get; }
+
+    IChartApi Chart { get; }
+
+    IDataApi Data { get; }
 }
 
 /// <inheritdoc cref="ITradingViewClient"/>
@@ -35,9 +39,15 @@ public sealed class TradingViewClient : ITradingViewClient
 
         var executor = new TvExecutor(transport, options);
         Health = new HealthApi(executor);
+        Chart = new ChartApi(executor);
+        Data = new DataApi(executor);
     }
 
     public IHealthApi Health { get; }
+
+    public IChartApi Chart { get; }
+
+    public IDataApi Data { get; }
 
     public void Dispose() => _ownedTransport?.Dispose();
 }

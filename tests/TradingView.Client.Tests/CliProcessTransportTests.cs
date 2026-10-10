@@ -30,6 +30,7 @@ public sealed class CliProcessTransportTests : IDisposable
             require_fs.writeFileSync(rest[0], String(process.pid));
             let i = 0; setInterval(() => console.log(JSON.stringify({ n: i++ })), 20); break;
           }
+          case 'crash': console.log(rest[0] ?? '{"success":true}'); process.exit(3221226505); break;
           case 'lines-then-fail': console.log('{"n":1}'); console.error('{"success":false,"error":"CDP gone"}'); process.exit(2); break;
         }
         """;
@@ -239,6 +240,29 @@ public sealed class CliProcessTransportTests : IDisposable
         await enumerator.DisposeAsync();
 
         Assert.True(process.WaitForExit(10_000), "node process should have been killed");
+    }
+
+    [Fact]
+    public async Task Node_shutdown_crash_after_complete_json_is_treated_as_success()
+    {
+        Assert.SkipUnless(OperatingSystem.IsWindows(), "0xC0000409 is a Windows exit code.");
+        using var transport = CreateTransport();
+
+        var raw = await transport.ExecuteAsync(TvCommand.Create("crash", "{\"success\":true,\"count\":1}"), TestContext.Current.CancellationToken);
+
+        Assert.Equal(0, raw.ExitCode);
+        Assert.Contains("count", raw.StdOut);
+    }
+
+    [Fact]
+    public async Task Node_shutdown_crash_without_json_stays_a_failure()
+    {
+        Assert.SkipUnless(OperatingSystem.IsWindows(), "0xC0000409 is a Windows exit code.");
+        using var transport = CreateTransport();
+
+        var raw = await transport.ExecuteAsync(TvCommand.Create("crash", "half-written {"), TestContext.Current.CancellationToken);
+
+        Assert.Equal(CliProcessTransport.NodeShutdownCrashExitCode, raw.ExitCode);
     }
 
     [Fact]

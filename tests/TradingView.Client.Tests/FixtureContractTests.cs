@@ -21,7 +21,11 @@ public class FixtureContractTests
     {
         var result = Fixtures.Deserialize(fixture);
 
-        Assert.True(result.Success);
+        Assert.Equal(!Fixtures.SoftFailures.Contains(fixture), result.Success);
+        if (!result.Success)
+        {
+            Assert.False(string.IsNullOrEmpty(result.Error));
+        }
     }
 
     /// <summary>
