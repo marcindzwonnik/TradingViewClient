@@ -1,0 +1,6 @@
+{
+  "success": true,
+  "source": "//@version=6\nindicator(\"TV Client Test\", overlay = true)\nlog.info(\"tvclient hello\")\nplot(close, \"Close\")\n",
+  "line_count": 5,
+  "char_count": 105
+}

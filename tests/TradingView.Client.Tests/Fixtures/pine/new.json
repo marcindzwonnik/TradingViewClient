@@ -1,0 +1,6 @@
+{
+  "success": true,
+  "type": "indicator",
+  "action": "new_script_created",
+  "template": "indicator"
+}

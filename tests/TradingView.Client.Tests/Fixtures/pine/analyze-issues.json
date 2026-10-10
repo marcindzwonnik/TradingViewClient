@@ -1,0 +1,24 @@
+{
+  "success": true,
+  "issue_count": 3,
+  "diagnostics": [
+    {
+      "line": 4,
+      "column": 5,
+      "message": "array.get(a, 5) — index 5 out of bounds (array size is 3)",
+      "severity": "error"
+    },
+    {
+      "line": 6,
+      "column": 5,
+      "message": "e.first() called on possibly empty array (declared with size 0)",
+      "severity": "warning"
+    },
+    {
+      "line": 7,
+      "column": 1,
+      "message": "strategy.entry/close used but no strategy() declaration found — did you mean to use indicator()?",
+      "severity": "error"
+    }
+  ]
+}

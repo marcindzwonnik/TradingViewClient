@@ -1,0 +1,26 @@
+{
+  "success": true,
+  "count": 5,
+  "shapes": [
+    {
+      "id": "ZeQbY1",
+      "name": "horizontal_line"
+    },
+    {
+      "id": "Ic4PUD",
+      "name": "trend_line"
+    },
+    {
+      "id": "VkIYr5",
+      "name": "rectangle"
+    },
+    {
+      "id": "GERAWU",
+      "name": "text"
+    },
+    {
+      "id": "o9cSw3",
+      "name": "vertical_line"
+    }
+  ]
+}

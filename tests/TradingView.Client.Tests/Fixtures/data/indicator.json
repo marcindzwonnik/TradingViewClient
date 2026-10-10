@@ -1,0 +1,55 @@
+{
+  "success": true,
+  "entity_id": "e6NNI2",
+  "visible": false,
+  "inputs": [
+    {
+      "id": "pineId",
+      "value": "USER;00000000000000000000000000000000"
+    },
+    {
+      "id": "pineVersion",
+      "value": "3.0"
+    },
+    {
+      "id": "pineFeatures",
+      "value": "{\"indicator\":1,\"plot\":1,\"array\":1,\"matrix\":1,\"ta\":1,\"math\":1,\"request.security\":1,\"builtin_methods\":1}"
+    },
+    {
+      "id": "in_0",
+      "value": "CBOE:VIX1D"
+    },
+    {
+      "id": "in_1",
+      "value": 20
+    },
+    {
+      "id": "in_2",
+      "value": 5
+    },
+    {
+      "id": "in_3",
+      "value": "0935-1030"
+    },
+    {
+      "id": "in_4",
+      "value": 0
+    },
+    {
+      "id": "in_5",
+      "value": true
+    },
+    {
+      "id": "in_6",
+      "value": false
+    },
+    {
+      "id": "__fast_calc",
+      "value": false
+    },
+    {
+      "id": "__profile",
+      "value": false
+    }
+  ]
+}

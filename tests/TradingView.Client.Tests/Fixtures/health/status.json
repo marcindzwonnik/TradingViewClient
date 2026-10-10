@@ -1,0 +1,16 @@
+{
+  "success": true,
+  "cdp_connected": true,
+  "target_id": "00000000000000000000000000000000",
+  "target_url": "https://www.tradingview.com/chart/XXXXXXXX/",
+  "target_title": "Live stock, index, futures, Forex and Bitcoin charts on TradingView",
+  "chart_symbol": "CME_MINI:ES1!",
+  "chart_resolution": "5",
+  "chart_type": 19,
+  "api_available": true,
+  "update": {
+    "update_available": false,
+    "local_commit": "3d2cbae9",
+    "latest_commit": "3d2cbae9"
+  }
+}

@@ -1,0 +1,6 @@
+{
+  "success": true,
+  "action": "tab_closed",
+  "tabs_before": 3,
+  "tabs_after": 2
+}

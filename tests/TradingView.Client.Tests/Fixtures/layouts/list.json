@@ -1,0 +1,56 @@
+{
+    "success":  true,
+    "layout_count":  7,
+    "source":  "internal_api",
+    "layouts":  [
+                    {
+                        "id":  1001,
+                        "name":  "Layout 1",
+                        "symbol":  "SP:SPX",
+                        "resolution":  "1D",
+                        "modified":  "2026-10-09"
+                    },
+                    {
+                        "id":  1002,
+                        "name":  "Layout 2",
+                        "symbol":  "CME_MINI:ESZ2025",
+                        "resolution":  "5",
+                        "modified":  "2025-11-30"
+                    },
+                    {
+                        "id":  1003,
+                        "name":  "Layout 3",
+                        "symbol":  "BATS:WPM",
+                        "resolution":  "M",
+                        "modified":  "2025-10-21"
+                    },
+                    {
+                        "id":  1004,
+                        "name":  "Layout 4",
+                        "symbol":  "IBKR:EURPLN",
+                        "resolution":  "5",
+                        "modified":  "2024-08-06"
+                    },
+                    {
+                        "id":  1005,
+                        "name":  "Layout 5",
+                        "symbol":  "IBKR:USDPLN",
+                        "resolution":  "5",
+                        "modified":  "2024-08-06"
+                    },
+                    {
+                        "id":  1006,
+                        "name":  "Layout 6",
+                        "symbol":  "IBKR:USDPLN",
+                        "resolution":  "1D",
+                        "modified":  "2024-08-06"
+                    },
+                    {
+                        "id":  1007,
+                        "name":  "Layout 7",
+                        "symbol":  "FX_IDC:USDPLN",
+                        "resolution":  "1D",
+                        "modified":  "2022-01-26"
+                    }
+                ]
+}

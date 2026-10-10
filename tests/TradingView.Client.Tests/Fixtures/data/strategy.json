@@ -1,0 +1,7 @@
+{
+  "success": false,
+  "metric_count": 0,
+  "source": "internal_api",
+  "metrics": {},
+  "error": "No strategy found on chart. Add a strategy first (e.g. indicator_add with a \"... Strategy\" script)."
+}

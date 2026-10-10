@@ -1,0 +1,8 @@
+{
+  "success": true,
+  "method": "cdp",
+  "file_path": "C:\\git\\tradingview-cli\\screenshots\\tvclient_fixture.png",
+  "region": "chart",
+  "waited_for_render": false,
+  "size_bytes": 45428
+}

@@ -1,0 +1,203 @@
+{
+  "success": true,
+  "study_count": 2,
+  "studies": [
+    {
+      "id": "dOctPe",
+      "name": "Moving Average Exponential",
+      "inputs": {
+        "text": "REDACTED",
+        "pineId": "STD;EMA",
+        "pineVersion": "37.0",
+        "pineFeatures": {
+          "v": "{\"indicator\":1,\"plot\":1,\"ta\":1}",
+          "f": true,
+          "t": "text"
+        },
+        "in_0": {
+          "v": 20,
+          "f": true,
+          "t": "integer"
+        },
+        "in_1": {
+          "v": "close",
+          "f": true,
+          "t": "source"
+        },
+        "in_2": {
+          "v": 0,
+          "f": true,
+          "t": "integer"
+        },
+        "in_3": {
+          "v": "None",
+          "f": true,
+          "t": "text"
+        },
+        "in_4": {
+          "v": 14,
+          "f": true,
+          "t": "integer"
+        },
+        "in_5": {
+          "v": 2,
+          "f": true,
+          "t": "float"
+        },
+        "in_6": {
+          "v": "",
+          "f": true,
+          "t": "resolution"
+        },
+        "in_7": {
+          "v": true,
+          "f": true,
+          "t": "bool"
+        },
+        "__fast_calc": {
+          "v": false,
+          "f": true,
+          "t": "bool"
+        },
+        "__profile": {
+          "v": false,
+          "f": true,
+          "t": "bool"
+        }
+      },
+      "values": {
+        "EMA": "7,863.35"
+      }
+    },
+    {
+      "id": "ZCh7uG",
+      "name": "Liquidity 2.0 [WALCL-RRP-TGA + WRESBAL + SOFR] (D1 Fix)",
+      "inputs": {
+        "text": "REDACTED",
+        "pineId": "USER;00000000000000000000000000000000",
+        "pineVersion": "25.0",
+        "pineFeatures": {
+          "v": "{\"indicator\":1,\"plot\":1,\"str\":1,\"ta\":1,\"math\":1,\"alertcondition\":1,\"label\":1,\"table\":1,\"request.security\":1}",
+          "f": true,
+          "t": "text"
+        },
+        "in_0": {
+          "v": false,
+          "f": true,
+          "t": "bool"
+        },
+        "in_1": {
+          "v": true,
+          "f": true,
+          "t": "bool"
+        },
+        "in_2": {
+          "v": true,
+          "f": true,
+          "t": "bool"
+        },
+        "in_3": {
+          "v": true,
+          "f": true,
+          "t": "bool"
+        },
+        "in_4": {
+          "v": true,
+          "f": true,
+          "t": "bool"
+        },
+        "in_5": {
+          "v": true,
+          "f": true,
+          "t": "bool"
+        },
+        "in_6": {
+          "v": true,
+          "f": true,
+          "t": "bool"
+        },
+        "in_7": {
+          "v": 52,
+          "f": true,
+          "t": "integer"
+        },
+        "in_8": {
+          "v": 8,
+          "f": true,
+          "t": "integer"
+        },
+        "in_9": {
+          "v": 4,
+          "f": true,
+          "t": "integer"
+        },
+        "in_10": {
+          "v": 20,
+          "f": true,
+          "t": "integer"
+        },
+        "in_11": {
+          "v": 0.5,
+          "f": true,
+          "t": "float"
+        },
+        "in_12": {
+          "v": -0.5,
+          "f": true,
+          "t": "float"
+        },
+        "in_13": {
+          "v": 0.45,
+          "f": true,
+          "t": "float"
+        },
+        "in_14": {
+          "v": 0.35,
+          "f": true,
+          "t": "float"
+        },
+        "in_15": {
+          "v": 0.2,
+          "f": true,
+          "t": "float"
+        },
+        "in_16": {
+          "v": 0.55,
+          "f": true,
+          "t": "float"
+        },
+        "in_17": {
+          "v": 0.3,
+          "f": true,
+          "t": "float"
+        },
+        "in_18": {
+          "v": 0.15,
+          "f": true,
+          "t": "float"
+        },
+        "__fast_calc": {
+          "v": false,
+          "f": true,
+          "t": "bool"
+        },
+        "__profile": {
+          "v": false,
+          "f": true,
+          "t": "bool"
+        }
+      },
+      "values": {
+        "Tactical Score": "−0.32",
+        "Confidence (0-1)": "0.00",
+        "Liquidity Update Flat": "0.00",
+        "Liquidity Update Up": "0.00",
+        "Liquidity Update Down": "0.00",
+        "Bullish Divergence": "0.00",
+        "Bearish Divergence": "0.00",
+        "Strong Bullish Divergence": "0.00",
+        "Strong Bearish Divergence": "0.00"
+      }
+    }
+  ]
+}

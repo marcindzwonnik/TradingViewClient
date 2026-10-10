@@ -1,0 +1,151 @@
+{
+  "success": true,
+  "query": "Indicators",
+  "strategy": "text",
+  "count": 13,
+  "elements": [
+    {
+      "tag": "div",
+      "text": "ES1!1m5m1hDWIndicatorsAlertReplayLayoutSave  ES1!1m5m1hDWLayoutSave  ES1!1m5m1hDWSym",
+      "aria_label": null,
+      "data_name": null,
+      "x": 52,
+      "y": 0,
+      "width": 970,
+      "height": 38,
+      "visible": true
+    },
+    {
+      "tag": "div",
+      "text": "ES1!1m5m1hDWIndicatorsAlertReplayLayoutSave  ES1!1m5m1hDWLayoutSave  ES1!1m5m1hDWSym",
+      "aria_label": null,
+      "data_name": null,
+      "x": 52,
+      "y": 0,
+      "width": 970,
+      "height": 38,
+      "visible": true
+    },
+    {
+      "tag": "div",
+      "text": "ES1!1m5m1hDWIndicatorsAlertReplayLayoutSave  ES1!1m5m1hDWLayoutSave  ES1!1m5m1hDWSym",
+      "aria_label": null,
+      "data_name": null,
+      "x": 52,
+      "y": 0,
+      "width": 970,
+      "height": 38,
+      "visible": true
+    },
+    {
+      "tag": "div",
+      "text": "ES1!1m5m1hDWIndicatorsAlertReplayLayoutSave",
+      "aria_label": null,
+      "data_name": null,
+      "x": 0,
+      "y": 0,
+      "width": 1252.5125732421875,
+      "height": 38,
+      "visible": false
+    },
+    {
+      "tag": "div",
+      "text": "ES1!1m5m1hDWIndicatorsAlertReplayLayoutSave",
+      "aria_label": null,
+      "data_name": null,
+      "x": 0,
+      "y": 0,
+      "width": 1252.5125732421875,
+      "height": 38,
+      "visible": true
+    },
+    {
+      "tag": "div",
+      "text": "ES1!1m5m1hDWIndicatorsAlertReplayLayoutSave",
+      "aria_label": null,
+      "data_name": null,
+      "x": 0,
+      "y": 0,
+      "width": 1252.5125732421875,
+      "height": 38,
+      "visible": true
+    },
+    {
+      "tag": "div",
+      "text": "ES1!1m5m1hDWIndicatorsAlertReplayLayoutSave",
+      "aria_label": null,
+      "data_name": null,
+      "x": 0,
+      "y": 0,
+      "width": 1252.5125732421875,
+      "height": 138,
+      "visible": true
+    },
+    {
+      "tag": "div",
+      "text": "ES1!1m5m1hDWIndicatorsAlertReplayLayoutSave",
+      "aria_label": null,
+      "data_name": null,
+      "x": 0,
+      "y": 0,
+      "width": 1252.5125732421875,
+      "height": 38,
+      "visible": true
+    },
+    {
+      "tag": "div",
+      "text": "ES1!1m5m1hDWIndicatorsAlertReplayLayoutSave",
+      "aria_label": null,
+      "data_name": null,
+      "x": 0,
+      "y": 0,
+      "width": 1252.5125732421875,
+      "height": 38,
+      "visible": true
+    },
+    {
+      "tag": "div",
+      "text": "Indicators",
+      "aria_label": null,
+      "data_name": null,
+      "x": 533.875,
+      "y": 0,
+      "width": 170.8000030517578,
+      "height": 38,
+      "visible": true
+    },
+    {
+      "tag": "div",
+      "text": "Indicators",
+      "aria_label": null,
+      "data_name": null,
+      "x": 533.875,
+      "y": 0,
+      "width": 132.8000030517578,
+      "height": 38,
+      "visible": true
+    },
+    {
+      "tag": "button",
+      "text": "Indicators",
+      "aria_label": "Indicators, metrics, and strategies",
+      "data_name": "open-indicators-dialog",
+      "x": 533.875,
+      "y": 0,
+      "width": 108.80000305175781,
+      "height": 38,
+      "visible": true
+    },
+    {
+      "tag": "div",
+      "text": "Indicators",
+      "aria_label": null,
+      "data_name": null,
+      "x": 570.875,
+      "y": 11,
+      "width": 61.79999923706055,
+      "height": 16,
+      "visible": true
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "success": true,
+  "added": 2,
+  "failed": 0,
+  "results": [
+    {
+      "symbol": "NASDAQ:NVDA",
+      "success": true,
+      "added_as": "NASDAQ:NVDA"
+    },
+    {
+      "symbol": "NASDAQ:AMD",
+      "success": true,
+      "added_as": "NASDAQ:AMD"
+    }
+  ]
+}

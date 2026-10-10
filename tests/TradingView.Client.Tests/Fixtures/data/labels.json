@@ -1,0 +1,33 @@
+{
+  "success": true,
+  "study_count": 1,
+  "studies": [
+    {
+      "name": "Liquidity 2.0 [WALCL-RRP-TGA + WRESBAL + SOFR] (D1 Fix)",
+      "total_labels": 15,
+      "showing": 5,
+      "labels": [
+        {
+          "text": "Liquidity RISK-OFF",
+          "price": -11.83403454
+        },
+        {
+          "text": "Liquidity RISK-OFF",
+          "price": -6.04914939
+        },
+        {
+          "text": "Liquidity RISK-ON",
+          "price": 11.23694888
+        },
+        {
+          "text": "Liquidity RISK-ON",
+          "price": 6.17875748
+        },
+        {
+          "text": "Liquidity RISK-ON",
+          "price": 15.3080264
+        }
+      ]
+    }
+  ]
+}

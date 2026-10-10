@@ -1,0 +1,76 @@
+{
+    "success":  true,
+    "alert_count":  3,
+    "source":  "internal_api",
+    "alerts":  [
+                   {
+                       "alert_id":  1001,
+                       "symbol":  "OANDA:GBPPLN",
+                       "type":  "price",
+                       "message":  "alert 1",
+                       "active":  false,
+                       "condition":  {
+                                         "type":  "moving_up_percents",
+                                         "frequency":  "on_first_fire",
+                                         "bars_count":  1,
+                                         "value":  0.75,
+                                         "series":  [
+                                                        {
+                                                            "type":  "barset"
+                                                        }
+                                                    ],
+                                         "cross_interval":  false
+                                     },
+                       "resolution":  "60",
+                       "created":  "2025-07-09T07:08:56Z",
+                       "last_fired":  null,
+                       "expiration":  null
+                   },
+                   {
+                       "alert_id":  1002,
+                       "symbol":  "OANDA:GBPPLN",
+                       "type":  "price",
+                       "message":  "alert 2",
+                       "active":  false,
+                       "condition":  {
+                                         "type":  "moving_down_percents",
+                                         "frequency":  "on_first_fire",
+                                         "bars_count":  1,
+                                         "value":  0.75,
+                                         "series":  [
+                                                        {
+                                                            "type":  "barset"
+                                                        }
+                                                    ],
+                                         "cross_interval":  false
+                                     },
+                       "resolution":  "60",
+                       "created":  "2025-07-09T07:08:44Z",
+                       "last_fired":  null,
+                       "expiration":  null
+                   },
+                   {
+                       "alert_id":  1003,
+                       "symbol":  "OANDA:GBPPLN",
+                       "type":  "price",
+                       "message":  "alert 3",
+                       "active":  true,
+                       "condition":  {
+                                         "type":  "moving_down_percents",
+                                         "frequency":  "on_first_fire",
+                                         "bars_count":  1,
+                                         "value":  0.5,
+                                         "series":  [
+                                                        {
+                                                            "type":  "barset"
+                                                        }
+                                                    ],
+                                         "cross_interval":  false
+                                     },
+                       "resolution":  "60",
+                       "created":  "2025-07-09T07:08:33Z",
+                       "last_fired":  "2026-03-23T11:17:46Z",
+                       "expiration":  null
+                   }
+               ]
+}

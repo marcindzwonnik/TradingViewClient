@@ -1,0 +1,113 @@
+{
+  "success": true,
+  "query": "AAPL",
+  "source": "rest_api",
+  "results": [
+    {
+      "symbol": "AAPL",
+      "description": "Apple Inc.",
+      "exchange": "NASDAQ",
+      "type": "stock",
+      "full_name": "NASDAQ:AAPL"
+    },
+    {
+      "symbol": "AAPL",
+      "description": "Apple Inc. Shs Canadian Depositary Receipt Repr Shs Reg S",
+      "exchange": "TSX",
+      "type": "dr",
+      "full_name": "TSX:AAPL"
+    },
+    {
+      "symbol": "AAPL",
+      "description": "APPLE INC / US DOLLAR",
+      "exchange": "Pyth",
+      "type": "stock",
+      "full_name": "Pyth:AAPL"
+    },
+    {
+      "symbol": "AAPL",
+      "description": "Apple Inc. Shs Cert Deposito Arg Repr 0.05 Shs",
+      "exchange": "BYMA",
+      "type": "dr",
+      "full_name": "BYMA:AAPL"
+    },
+    {
+      "symbol": "AAPL",
+      "description": "Apple Inc.",
+      "exchange": "BMV",
+      "type": "stock",
+      "full_name": "BMV:AAPL"
+    },
+    {
+      "symbol": "AAPL",
+      "description": "Apple Inc.",
+      "exchange": "BIVA",
+      "type": "stock",
+      "full_name": "BIVA:AAPL"
+    },
+    {
+      "symbol": "AAPL",
+      "description": "Apple Inc.",
+      "exchange": "BCS",
+      "type": "stock",
+      "full_name": "BCS:AAPL"
+    },
+    {
+      "symbol": "AAPL",
+      "description": "Apple Inc.",
+      "exchange": "SIX",
+      "type": "stock",
+      "full_name": "SIX:AAPL"
+    },
+    {
+      "symbol": "AAPL",
+      "description": "Apple Inc. Shs Canadian Depositary Receipt Repr Shs Reg S",
+      "exchange": "NEO",
+      "type": "dr",
+      "full_name": "NEO:AAPL"
+    },
+    {
+      "symbol": "AAPL",
+      "description": "Apple Inc.",
+      "exchange": "BOATS",
+      "type": "stock",
+      "full_name": "BOATS:AAPL"
+    },
+    {
+      "symbol": "AAPL",
+      "description": "Apple Inc.",
+      "exchange": "BVC",
+      "type": "stock",
+      "full_name": "BVC:AAPL"
+    },
+    {
+      "symbol": "AAPL",
+      "description": "Apple Inc.",
+      "exchange": "GPW",
+      "type": "stock",
+      "full_name": "GPW:AAPL"
+    },
+    {
+      "symbol": "AAPL",
+      "description": "Apple Inc.",
+      "exchange": "VIE",
+      "type": "stock",
+      "full_name": "VIE:AAPL"
+    },
+    {
+      "symbol": "AAPLMANT_6B77C1",
+      "description": "Apple Inc. / MANTA STOCK on Base (0x6b77C131282a48216F2caFcf9aE3194288cf7268)",
+      "exchange": "Uniswap v4 Base",
+      "type": "spot",
+      "full_name": "Uniswap v4 Base:AAPLMANT_6B77C1"
+    },
+    {
+      "symbol": "AAPLIPOD_851F65",
+      "description": "Apple Inc. / iPod on Base (0x851F65bCDF6485F15047D4dea1CF8CB60aD1a815)",
+      "exchange": "Uniswap v4 Base",
+      "type": "spot",
+      "full_name": "Uniswap v4 Base:AAPLIPOD_851F65"
+    }
+  ],
+  "count": 15
+}

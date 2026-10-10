@@ -1,0 +1,7 @@
+{
+  "success": false,
+  "data_points": 0,
+  "source": "internal_api",
+  "data": [],
+  "error": "No strategy found on chart."
+}

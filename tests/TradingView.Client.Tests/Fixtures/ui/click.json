@@ -1,0 +1,10 @@
+{
+  "success": true,
+  "clicked": {
+    "found": true,
+    "tag": "button",
+    "text": "Indicators",
+    "aria_label": "Indicators, metrics, and strategies",
+    "data_name": "open-indicators-dialog"
+  }
+}

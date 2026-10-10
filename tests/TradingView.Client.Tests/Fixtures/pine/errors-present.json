@@ -1,0 +1,13 @@
+{
+  "success": true,
+  "has_errors": true,
+  "error_count": 1,
+  "errors": [
+    {
+      "line": 3,
+      "column": 6,
+      "message": "Undeclared identifier \"undefined_variable\"",
+      "severity": 8
+    }
+  ]
+}

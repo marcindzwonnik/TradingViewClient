@@ -1,0 +1,16 @@
+{
+  "success": true,
+  "entries": [
+    {
+      "timestamp": null,
+      "type": "info",
+      "message": "Pine EditorUntitled script12345//@version=6indicator(\"TV Client Test\", overlay = true)log.info(\"tvclient hello\")plot(close, \"Close\")Press desired key combination and then press ENTER.22:22:41\"Untitled script\" opened22:22:52Compiling...22:24:15Compiling...Line 1, Col 1Pine Script® v6"
+    },
+    {
+      "timestamp": null,
+      "type": "info",
+      "message": "Untitled script12345//@version=6indicator(\"TV Client Test\", overlay = true)log.info(\"tvclient hello\")plot(close, \"Close\")Press desired key combination and then press ENTER.22:22:41\"Untitled script\" opened22:22:52Compiling...22:24:15Compiling...Line 1, Col 1Pine Script® v6"
+    }
+  ],
+  "entry_count": 2
+}

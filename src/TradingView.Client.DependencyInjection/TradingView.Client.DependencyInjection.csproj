@@ -1,0 +1,15 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <IsAotCompatible>true</IsAotCompatible>
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+    <NoWarn>$(NoWarn);CS1591;CS1573</NoWarn>
+    <RootNamespace>TradingView.Client.DependencyInjection</RootNamespace>
+    <PackageId>TradingView.Client.DependencyInjection</PackageId>
+    <Description>Microsoft.Extensions.DependencyInjection integration for TradingView.Client (AddTradingViewClient).</Description>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection.Abstractions" />
+    <PackageReference Include="Microsoft.Extensions.Options" />
+    <ProjectReference Include="..\TradingView.Client\TradingView.Client.csproj" />
+  </ItemGroup>
+</Project>

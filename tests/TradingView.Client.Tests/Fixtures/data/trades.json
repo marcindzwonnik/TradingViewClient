@@ -1,0 +1,8 @@
+{
+  "success": false,
+  "trade_count": 0,
+  "total_orders": 0,
+  "source": "internal_api",
+  "trades": [],
+  "error": "No strategy found on chart."
+}

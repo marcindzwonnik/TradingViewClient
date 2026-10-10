@@ -1,0 +1,11 @@
+{
+  "success": true,
+  "is_replay_available": true,
+  "is_replay_started": false,
+  "is_autoplay_started": false,
+  "replay_mode": "ActiveChart",
+  "current_date": null,
+  "autoplay_delay": 10000,
+  "position": null,
+  "realized_pnl": null
+}

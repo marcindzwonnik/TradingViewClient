@@ -1,0 +1,10 @@
+{
+  "success": true,
+  "date": "2026-10-01",
+  "centered_on": 1790812800,
+  "resolution": "60",
+  "window": {
+    "from": 1790722800,
+    "to": 1790902800
+  }
+}
