@@ -1,3 +1,5 @@
+> **Status:** wykonany (etapy 1-5). Odstępstwa od planu i korekty kontraktu: koniec `docs/tv-cli-contract.md`; opis użycia: `README.md`.
+
 # Plan: TradingView.Client – silnie typowany klient .NET 10 dla `tradingview-cli`
 
 ## Context

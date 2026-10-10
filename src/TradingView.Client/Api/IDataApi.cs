@@ -28,6 +28,7 @@ public interface IDataApi
 
     Task<PineBoxesResult> GetPineBoxesAsync(string? studyFilter = null, bool verbose = false, CancellationToken cancellationToken = default);
 
+    /// <remarks>Opens the Strategy Tester in the bottom panel as a side effect (also for <see cref="GetTradesAsync"/> and <see cref="GetEquityAsync"/>).</remarks>
     /// <exception cref="TvOperationFailedException">There is no strategy on the chart (unless disabled via <see cref="TvClientOptions.ThrowOnOperationFailure"/>).</exception>
     Task<StrategyResultsResult> GetStrategyResultsAsync(CancellationToken cancellationToken = default);
 

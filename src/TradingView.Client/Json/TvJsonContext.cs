@@ -103,6 +103,15 @@ namespace TradingView.Client;
 [JsonSerializable(typeof(UiPanelResult))]
 [JsonSerializable(typeof(UiFullscreenResult))]
 [JsonSerializable(typeof(UiMouseResult))]
+// Streams
+[JsonSerializable(typeof(QuoteTick))]
+[JsonSerializable(typeof(BarTick))]
+[JsonSerializable(typeof(StudyValuesTick))]
+[JsonSerializable(typeof(PineLinesTick))]
+[JsonSerializable(typeof(PineLabelsTick))]
+[JsonSerializable(typeof(PineTablesTick))]
+[JsonSerializable(typeof(AllPanesTick))]
+[JsonSerializable(typeof(OhlcvFeedTick))]
 public sealed partial class TvJsonContext : JsonSerializerContext
 {
 }

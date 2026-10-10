@@ -281,6 +281,16 @@ $catalogue = @(
     @{ Area = 'Panes';    Name = 'list';         Args = @('pane', 'list') }
     @{ Area = 'Tabs';     Name = 'list';         Args = @('tab', 'list') }
     @{ Area = 'Screenshot'; Name = 'chart';      Args = @('screenshot', '--region', 'chart', '--output', 'tvclient_fixture') }
+    # Streams run for -StreamSeconds and are then stopped. The market is usually closed, so a stream emits its first
+    # snapshot and stays quiet; the multi-feed reuses the active pane (no layout change) because its spec matches the chart.
+    @{ Area = 'Streams'; Name = 'quote';  Args = @('stream', 'quote');  Stream = $true }
+    @{ Area = 'Streams'; Name = 'bars';   Args = @('stream', 'bars');   Stream = $true }
+    @{ Area = 'Streams'; Name = 'values'; Args = @('stream', 'values'); Stream = $true }
+    @{ Area = 'Streams'; Name = 'lines';  Args = @('stream', 'lines');  Stream = $true }
+    @{ Area = 'Streams'; Name = 'labels'; Args = @('stream', 'labels'); Stream = $true }
+    @{ Area = 'Streams'; Name = 'tables'; Args = @('stream', 'tables'); Stream = $true }
+    @{ Area = 'Streams'; Name = 'all';    Args = @('stream', 'all');    Stream = $true }
+    @{ Area = 'Streams'; Name = 'ohlcv';  Args = { $st = Get-TvJson @('state'); @('stream', 'ohlcv', "$($st.symbol)@$($st.resolution)") }; Stream = $true }
     @{ Area = 'Ui'; Name = 'find';               Args = @('ui', 'find', 'Indicators', '--strategy', 'text') }
     @{ Area = 'Ui'; Name = 'find-aria';          Args = @('ui', 'find', 'Close', '--strategy', 'aria-label') }
     @{ Area = 'Ui'; Name = 'eval-number';        Args = @('ui', 'eval', '1+1') }
@@ -506,7 +516,7 @@ function Invoke-UiScenario {
 
 # --- Run ---------------------------------------------------------------------------------------------------
 $uiRaw = Invoke-Tv -TvArgs @('ui-state')
-if ($uiRaw.StdOut -match 'Active layout: ([^"\]+)') { $script:activeLayoutName = $Matches[1].Trim() }
+if ($uiRaw.StdOut -match 'Active layout: ([^"\\]+)') { $script:activeLayoutName = $Matches[1].Trim() }
 $status = Invoke-Tv -TvArgs @('status')
 if ($status.ExitCode -ne 0) {
     throw "tv status failed (exit $($status.ExitCode)). Start TradingView with CDP enabled first (`tv launch`). $($status.StdErr)"

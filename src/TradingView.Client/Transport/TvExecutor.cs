@@ -47,7 +47,10 @@ internal sealed class TvExecutor(ITvTransport transport, TvClientOptions options
         }
     }
 
-    /// <summary>The CLI writes <c>{ success:false, error }</c> to stderr; unknown commands write plain text.</summary>
+    /// <summary>
+    /// The CLI writes <c>{ success:false, error }</c> to stderr; unknown commands write plain text. Streams may put
+    /// progress lines before the JSON, so the last JSON object in the text is tried as well.
+    /// </summary>
     internal static string? ExtractErrorMessage(string stdErr)
     {
         var trimmed = stdErr.Trim();
@@ -56,25 +59,45 @@ internal sealed class TvExecutor(ITvTransport transport, TvClientOptions options
             return null;
         }
 
-        if (trimmed[0] == '{')
+        if (TryReadError(trimmed, out var message))
         {
-            try
-            {
-                using var document = JsonDocument.Parse(trimmed);
-                if (document.RootElement.ValueKind == JsonValueKind.Object
-                    && document.RootElement.TryGetProperty("error", out var error)
-                    && error.ValueKind == JsonValueKind.String
-                    && !string.IsNullOrWhiteSpace(error.GetString()))
-                {
-                    return error.GetString();
-                }
-            }
-            catch (JsonException)
-            {
-                // fall through to the raw text
-            }
+            return message;
+        }
+
+        var lastObject = trimmed.LastIndexOf("\n{", StringComparison.Ordinal);
+        if (lastObject >= 0 && TryReadError(trimmed[(lastObject + 1)..], out message))
+        {
+            return message;
         }
 
         return trimmed;
+    }
+
+    private static bool TryReadError(string text, out string? message)
+    {
+        message = null;
+        if (text[0] != '{')
+        {
+            return false;
+        }
+
+        try
+        {
+            using var document = JsonDocument.Parse(text);
+            if (document.RootElement.ValueKind == JsonValueKind.Object
+                && document.RootElement.TryGetProperty("error", out var error)
+                && error.ValueKind == JsonValueKind.String
+                && !string.IsNullOrWhiteSpace(error.GetString()))
+            {
+                message = error.GetString();
+                return true;
+            }
+        }
+        catch (JsonException)
+        {
+            // not JSON: the caller falls back to the raw text
+        }
+
+        return false;
     }
 }

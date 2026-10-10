@@ -32,6 +32,8 @@ public interface ITradingViewClient : IDisposable
     IScreenshotApi Screenshots { get; }
 
     IUiApi Ui { get; }
+
+    IStreamApi Streams { get; }
 }
 
 /// <inheritdoc cref="ITradingViewClient"/>
@@ -74,6 +76,7 @@ public sealed class TradingViewClient : ITradingViewClient
         Tabs = new TabApi(executor);
         Screenshots = new ScreenshotApi(executor);
         Ui = new UiApi(executor);
+        Streams = new StreamApi(executor);
     }
 
     public IHealthApi Health { get; }
@@ -103,6 +106,8 @@ public sealed class TradingViewClient : ITradingViewClient
     public IScreenshotApi Screenshots { get; }
 
     public IUiApi Ui { get; }
+
+    public IStreamApi Streams { get; }
 
     public void Dispose() => _ownedTransport?.Dispose();
 }

@@ -153,7 +153,8 @@ public class ChartDataIntegrationTests
     public async Task Strategy_data_is_either_present_or_reported_as_operation_failure()
     {
         using var tv = await Client();
-
+        // `tv data strategy` opens the Strategy Tester in the bottom panel as a side effect.
+        var bottomWasOpen = (await tv.Health.GetUiStateAsync(Ct)).BottomPanel?.Open == true;
         try
         {
             var strategy = await tv.Data.GetStrategyResultsAsync(Ct);
@@ -163,6 +164,13 @@ public class ChartDataIntegrationTests
         {
             Assert.IsType<StrategyResultsResult>(ex.Result);
             Assert.False(string.IsNullOrEmpty(ex.Message));
+        }
+        finally
+        {
+            if (!bottomWasOpen && (await tv.Health.GetUiStateAsync(Ct)).BottomPanel?.Open == true)
+            {
+                await tv.Ui.ClickAsync(UiSelector.AriaLabel, "Collapse panel", Ct);
+            }
         }
     }
 

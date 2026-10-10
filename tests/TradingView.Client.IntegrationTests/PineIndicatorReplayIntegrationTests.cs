@@ -210,6 +210,8 @@ public class PineIndicatorReplayIntegrationTests
             Assert.Skip("Replay is already running on the chart.");
         }
 
+        // The autoplay delay is a persistent TradingView setting; put it back afterwards.
+        var originalDelay = (ReplaySpeed)(await tv.Replay.GetStatusAsync(Ct)).AutoplayDelay;
         try
         {
             var start = await tv.Replay.StartAsync(cancellationToken: Ct);
@@ -232,10 +234,23 @@ public class PineIndicatorReplayIntegrationTests
         }
         finally
         {
+            if (Enum.IsDefined(originalDelay))
+            {
+                // Replay must be running to change the delay: switch autoplay on with the old delay, then off.
+                var status = await tv.Replay.GetStatusAsync(Ct);
+                if (status.IsReplayStarted && status.AutoplayDelay != (int)originalDelay)
+                {
+                    await tv.Replay.ToggleAutoplayAsync(originalDelay, Ct);
+                    await tv.Replay.ToggleAutoplayAsync(cancellationToken: Ct);
+                }
+            }
+
             await tv.Replay.StopAsync(Ct);
         }
 
-        Assert.False((await tv.Replay.GetStatusAsync(Ct)).IsReplayStarted);
+        var after = await tv.Replay.GetStatusAsync(Ct);
+        Assert.False(after.IsReplayStarted);
+        Assert.Equal((int)originalDelay, after.AutoplayDelay);
     }
 
     private static async Task RemoveNewStudiesAsync(TradingViewClient tv, HashSet<string> before)

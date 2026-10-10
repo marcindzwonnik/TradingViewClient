@@ -9,6 +9,10 @@
     <Using Include="Xunit" />
   </ItemGroup>
   <ItemGroup>
+    <!-- All tests drive one shared TradingView chart: tests that change the symbol or timeframe must not race with readers. -->
+    <Content Include="xunit.runner.json" CopyToOutputDirectory="PreserveNewest" />
+  </ItemGroup>
+  <ItemGroup>
     <ProjectReference Include="..\..\src\TradingView.Client\TradingView.Client.csproj" />
   </ItemGroup>
 </Project>

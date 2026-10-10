@@ -6,10 +6,12 @@
   </PropertyGroup>
   <ItemGroup>
     <PackageReference Include="xunit.v3" />
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection" />
     <Using Include="Xunit" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\..\src\TradingView.Client\TradingView.Client.csproj" />
+    <ProjectReference Include="..\..\src\TradingView.Client.DependencyInjection\TradingView.Client.DependencyInjection.csproj" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Fixtures\**\*" CopyToOutputDirectory="PreserveNewest" />

@@ -347,3 +347,14 @@ Wynik zrzutu `tools/Capture-Fixtures.ps1` (TradingView Desktop, CLI `3d2cbae`) i
 - **`ui panel watchlist`** przełącza prawy panel; otwiera ten widżet, który był ostatnio aktywny (u nas „Fundamental Graphs”). `ui panel pine-editor close` nie zamyka edytora.
 - **`ui eval`** zwraca `{"success":true}` bez pola `result` dla `undefined`.
 - **`screenshot`**: zapisuje do `<repo CLI>/screenshots/` (`tvclient_fixture.png`), `-o` bez rozszerzenia.
+
+### Dodatkowe korekty z etapu 5 (strumienie)
+
+- **Format linii:** zwarty JSON, jedna linia na zmianę. `_stream` dla `stream all` to `all-panes`. `stream ohlcv` nie ma `_ts`/`_stream`, ma `observed_at` (ms) i `tab_id`.
+- **`stream values`:** `studies[].values` zawiera liczby, ale też wewnętrzne klucze `_start` i `_end` (np. 0 i 400), nie tylko wartości wskaźnika. Wartości `null` odpowiadają NaN.
+- **Pusty rynek:** poza sesją strumień wypisuje jeden snapshot i milczy (dedup po JSON-ie), więc na pierwszą linię trzeba czekać do kilku sekund (start `node` + połączenie CDP).
+- **`stream ohlcv` wymaga dokładnej zgodności symbolu:** `NASDAQ:AAPL@15` zakończyło się `Timed out setting symbol for NASDAQ:AAPL@15.`, bo TradingView rozwiązuje ten symbol do `BATS:AAPL`. Użyj symbolu tak, jak go raportuje wykres (`tv pane list`).
+- **Skutki uboczne multi-feed:** feedy przypisywane są do paneli, więc `stream ohlcv CME_MINI:ES1!@1 CME_MINI:ES1!@15` zmienia timeframe aktywnego panelu na 1, a przy okazji rozwinął dolny panel „Strategy Report”. Po zakończeniu zostaje to na wykresie (CLI o tym ostrzega na stderr).
+- **Błąd po komunikatach postępu:** przy niepowodzeniu strumienia stderr to linie tekstu (`[stream:ohlcv] stopped. ...`), a dopiero potem JSON `{success:false,error}`. Klient wyciąga `error` z ostatniego obiektu JSON.
+- **Brak fixtur dla pustych studiów:** `stream lines|labels|tables` zwróciły u testowego użytkownika `studies: []`; kształty zawartości pochodzą z kontraktu i testów ręcznych.
+- **`data strategy|trades|equity` mają skutek uboczny w UI:** otwierają dolny panel (Strategy Tester), co zostaje po komendzie, nawet gdy na wykresie nie ma strategii. `unhidden_strategies` w odpowiedzi to ślad tego mechanizmu.

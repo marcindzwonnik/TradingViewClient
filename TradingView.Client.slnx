@@ -1,10 +1,14 @@
 <Solution>
   <Folder Name="/src/">
     <Project Path="src/TradingView.Client/TradingView.Client.csproj" />
+    <Project Path="src/TradingView.Client.DependencyInjection/TradingView.Client.DependencyInjection.csproj" />
   </Folder>
   <Folder Name="/tests/">
     <Project Path="tests/TradingView.Client.Tests/TradingView.Client.Tests.csproj" />
     <Project Path="tests/TradingView.Client.IntegrationTests/TradingView.Client.IntegrationTests.csproj" />
+  </Folder>
+  <Folder Name="/samples/">
+    <Project Path="samples/TradingView.Client.Sample/TradingView.Client.Sample.csproj" />
   </Folder>
   <Folder Name="/docs/">
     <File Path="docs/PLAN.md" />
