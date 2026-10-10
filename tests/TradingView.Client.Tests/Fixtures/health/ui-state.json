@@ -1,0 +1,653 @@
+{
+  "success": true,
+  "bottom_panel": {
+    "open": false,
+    "height": 0
+  },
+  "right_panel": {
+    "open": false,
+    "width": 45
+  },
+  "pine_editor": {
+    "open": false,
+    "width": 0,
+    "height": 0
+  },
+  "strategy_tester": {
+    "open": false
+  },
+  "widgetbar": {
+    "open": false
+  },
+  "buttons": {
+    "top_bar": [
+      {
+        "label": "Logged in as user\nActive layout: Layout",
+        "disabled": false,
+        "x": 0,
+        "y": 0
+      },
+      {
+        "label": "ES1!",
+        "disabled": false,
+        "x": 4,
+        "y": 5
+      },
+      {
+        "label": "Compare symbols",
+        "disabled": false,
+        "x": 136,
+        "y": 0
+      },
+      {
+        "label": "1m",
+        "disabled": false,
+        "x": 183,
+        "y": 0
+      },
+      {
+        "label": "5m",
+        "disabled": false,
+        "x": 214,
+        "y": 0
+      },
+      {
+        "label": "1h",
+        "disabled": false,
+        "x": 245,
+        "y": 0
+      },
+      {
+        "label": "D",
+        "disabled": false,
+        "x": 272,
+        "y": 0
+      },
+      {
+        "label": "W",
+        "disabled": false,
+        "x": 292,
+        "y": 0
+      },
+      {
+        "label": "Chart interval",
+        "disabled": false,
+        "x": 316,
+        "y": 0
+      },
+      {
+        "label": "Volume candles",
+        "disabled": false,
+        "x": 349,
+        "y": 0
+      },
+      {
+        "label": "Volume footprint",
+        "disabled": false,
+        "x": 387,
+        "y": 0
+      },
+      {
+        "label": "Time price opportunity",
+        "disabled": false,
+        "x": 425,
+        "y": 0
+      },
+      {
+        "label": "Bar's style",
+        "disabled": false,
+        "x": 463,
+        "y": 0
+      },
+      {
+        "label": "Indicators",
+        "disabled": false,
+        "x": 496,
+        "y": 0
+      },
+      {
+        "label": "Favorite indicators",
+        "disabled": false,
+        "x": 605,
+        "y": 0
+      },
+      {
+        "label": "Indicator templates",
+        "disabled": false,
+        "x": 629,
+        "y": 0
+      },
+      {
+        "label": "Alert",
+        "disabled": false,
+        "x": 675,
+        "y": 0
+      },
+      {
+        "label": "Replay",
+        "disabled": false,
+        "x": 754,
+        "y": 0
+      },
+      {
+        "label": "Undo hide VIX1D adj (VIX1D · CBOE, 20, 5",
+        "disabled": false,
+        "x": 851,
+        "y": 0
+      },
+      {
+        "label": "Layout setup",
+        "disabled": false,
+        "x": 927,
+        "y": 0
+      },
+      {
+        "label": "SymuSave",
+        "disabled": false,
+        "x": 965,
+        "y": 0
+      },
+      {
+        "label": "Manage layouts",
+        "disabled": false,
+        "x": 1030,
+        "y": 0
+      },
+      {
+        "label": "Quick search",
+        "disabled": false,
+        "x": 1063,
+        "y": 0
+      },
+      {
+        "label": "Settings",
+        "disabled": false,
+        "x": 1101,
+        "y": 0
+      },
+      {
+        "label": "Fullscreen mode",
+        "disabled": false,
+        "x": 1139,
+        "y": 0
+      },
+      {
+        "label": "Take a snapshot",
+        "disabled": false,
+        "x": 1177,
+        "y": 0
+      },
+      {
+        "label": "Indicators, metrics, and strategies",
+        "disabled": false,
+        "x": 496,
+        "y": 0
+      },
+      {
+        "label": "Create alert",
+        "disabled": false,
+        "x": 605,
+        "y": 0
+      },
+      {
+        "label": "Bar replay",
+        "disabled": false,
+        "x": 643,
+        "y": 0
+      },
+      {
+        "label": "Share your idea with the trade community",
+        "disabled": false,
+        "x": 917,
+        "y": 0
+      },
+      {
+        "label": "Trade",
+        "disabled": false,
+        "x": 959,
+        "y": 5
+      },
+      {
+        "label": "Cross",
+        "disabled": false,
+        "x": 0,
+        "y": 48
+      },
+      {
+        "label": "S&P 500 E-mini Futures",
+        "disabled": false,
+        "x": 87,
+        "y": 49
+      },
+      {
+        "label": "More",
+        "disabled": false,
+        "x": 347,
+        "y": 46
+      },
+      {
+        "label": "Watchlist, details, and news",
+        "disabled": false,
+        "x": 978,
+        "y": 44
+      }
+    ],
+    "toolbar": [
+      {
+        "label": "Trendline",
+        "disabled": false,
+        "x": 0,
+        "y": 86
+      }
+    ],
+    "left_sidebar": [
+      {
+        "label": "Fib retracement",
+        "disabled": false,
+        "x": 0,
+        "y": 124
+      },
+      {
+        "label": "XABCD pattern",
+        "disabled": false,
+        "x": 0,
+        "y": 162
+      },
+      {
+        "label": "Long position",
+        "disabled": false,
+        "x": 0,
+        "y": 200
+      },
+      {
+        "label": "Brush",
+        "disabled": false,
+        "x": 0,
+        "y": 238
+      },
+      {
+        "label": "Text",
+        "disabled": false,
+        "x": 0,
+        "y": 276
+      },
+      {
+        "label": "Icon",
+        "disabled": false,
+        "x": 0,
+        "y": 314
+      },
+      {
+        "label": "Measure",
+        "disabled": false,
+        "x": 0,
+        "y": 365
+      },
+      {
+        "label": "Zoom in",
+        "disabled": false,
+        "x": 0,
+        "y": 403
+      },
+      {
+        "label": "Keep drawing",
+        "disabled": false,
+        "x": 0,
+        "y": 492
+      },
+      {
+        "label": "Lock drawings and indicators",
+        "disabled": false,
+        "x": 0,
+        "y": 530
+      },
+      {
+        "label": "Hide all drawings",
+        "disabled": false,
+        "x": 0,
+        "y": 568
+      },
+      {
+        "label": "New drawings will not be synced",
+        "disabled": false,
+        "x": 0,
+        "y": 606
+      },
+      {
+        "label": "Remove objects",
+        "disabled": false,
+        "x": 0,
+        "y": 657
+      },
+      {
+        "label": "Show Favorite Drawing Tools Toolbar",
+        "disabled": false,
+        "x": 0,
+        "y": 1012
+      }
+    ],
+    "other": [
+      {
+        "label": "10",
+        "disabled": false,
+        "x": 65,
+        "y": 355
+      },
+      {
+        "label": "Show",
+        "disabled": false,
+        "x": 167,
+        "y": 112
+      },
+      {
+        "label": "Remove",
+        "disabled": false,
+        "x": 223,
+        "y": 112
+      },
+      {
+        "label": "Hide",
+        "disabled": false,
+        "x": 143,
+        "y": 208
+      },
+      {
+        "label": "Object tree and data window",
+        "disabled": false,
+        "x": 978,
+        "y": 136
+      },
+      {
+        "label": "AI Copilot",
+        "disabled": false,
+        "x": 978,
+        "y": 603
+      },
+      {
+        "label": "Pine",
+        "disabled": false,
+        "x": 978,
+        "y": 647
+      },
+      {
+        "label": "Calendars",
+        "disabled": false,
+        "x": 978,
+        "y": 691
+      },
+      {
+        "label": "News Flow",
+        "disabled": false,
+        "x": 978,
+        "y": 737
+      }
+    ],
+    "bottom_bar": [
+      {
+        "label": "A",
+        "disabled": false,
+        "x": 918,
+        "y": 944
+      },
+      {
+        "label": "L",
+        "disabled": false,
+        "x": 942,
+        "y": 944
+      },
+      {
+        "label": "Date Range",
+        "disabled": false,
+        "x": 64,
+        "y": 1032
+      },
+      {
+        "label": "1D",
+        "disabled": false,
+        "x": 64,
+        "y": 1032
+      },
+      {
+        "label": "5D",
+        "disabled": false,
+        "x": 92,
+        "y": 1032
+      },
+      {
+        "label": "1M",
+        "disabled": false,
+        "x": 120,
+        "y": 1032
+      },
+      {
+        "label": "3M",
+        "disabled": false,
+        "x": 149,
+        "y": 1032
+      },
+      {
+        "label": "6M",
+        "disabled": false,
+        "x": 178,
+        "y": 1032
+      },
+      {
+        "label": "YTD",
+        "disabled": false,
+        "x": 208,
+        "y": 1032
+      },
+      {
+        "label": "1Y",
+        "disabled": false,
+        "x": 244,
+        "y": 1032
+      },
+      {
+        "label": "5Y",
+        "disabled": false,
+        "x": 272,
+        "y": 1032
+      },
+      {
+        "label": "All",
+        "disabled": false,
+        "x": 299,
+        "y": 1032
+      },
+      {
+        "label": "Go to",
+        "disabled": false,
+        "x": 336,
+        "y": 1032
+      },
+      {
+        "label": "22:04:39 UTC+2",
+        "disabled": false,
+        "x": 764,
+        "y": 1032
+      },
+      {
+        "label": "ETH",
+        "disabled": false,
+        "x": 875,
+        "y": 1032
+      },
+      {
+        "label": "B-ADJ",
+        "disabled": false,
+        "x": 920,
+        "y": 1032
+      },
+      {
+        "label": "Fundamental Graphs",
+        "disabled": false,
+        "x": 978,
+        "y": 783
+      },
+      {
+        "label": "Community",
+        "disabled": false,
+        "x": 978,
+        "y": 829
+      },
+      {
+        "label": "2",
+        "disabled": false,
+        "x": 978,
+        "y": 875
+      },
+      {
+        "label": "Chats",
+        "disabled": false,
+        "x": 978,
+        "y": 921
+      },
+      {
+        "label": "Products",
+        "disabled": false,
+        "x": 978,
+        "y": 967
+      },
+      {
+        "label": "Help Center",
+        "disabled": false,
+        "x": 978,
+        "y": 1024
+      },
+      {
+        "label": "Show more",
+        "disabled": false,
+        "x": 64,
+        "y": 1070
+      },
+      {
+        "label": "toast-group-close-button-orders",
+        "disabled": false,
+        "x": 180,
+        "y": 1070
+      },
+      {
+        "label": "toast-group-close-button-alerts",
+        "disabled": false,
+        "x": 180,
+        "y": 1070
+      },
+      {
+        "label": "toast-group-close-button-alertsFireContr",
+        "disabled": false,
+        "x": 180,
+        "y": 1070
+      },
+      {
+        "label": "toast-group-close-button-alertsWatchlist",
+        "disabled": false,
+        "x": 180,
+        "y": 1070
+      },
+      {
+        "label": "toast-group-close-button-trading-notific",
+        "disabled": false,
+        "x": 180,
+        "y": 1070
+      },
+      {
+        "label": "toast-group-close-button-gift",
+        "disabled": false,
+        "x": 180,
+        "y": 1070
+      },
+      {
+        "label": "toast-group-close-button-force-password-",
+        "disabled": false,
+        "x": 180,
+        "y": 1070
+      },
+      {
+        "label": "toast-group-close-button-chat-message",
+        "disabled": false,
+        "x": 180,
+        "y": 1070
+      },
+      {
+        "label": "toast-group-close-button-abandoned-cart",
+        "disabled": false,
+        "x": 180,
+        "y": 1070
+      },
+      {
+        "label": "toast-group-close-button-account-deletio",
+        "disabled": false,
+        "x": 180,
+        "y": 1070
+      },
+      {
+        "label": "toast-group-close-button-account-deletio",
+        "disabled": false,
+        "x": 180,
+        "y": 1070
+      },
+      {
+        "label": "toast-group-close-button-support-portal",
+        "disabled": false,
+        "x": 180,
+        "y": 1070
+      },
+      {
+        "label": "toast-group-close-button-global-notifica",
+        "disabled": false,
+        "x": 180,
+        "y": 1070
+      },
+      {
+        "label": "toast-group-close-button-news-notificati",
+        "disabled": false,
+        "x": 180,
+        "y": 1070
+      },
+      {
+        "label": "toast-group-close-button-chart_warning",
+        "disabled": false,
+        "x": 180,
+        "y": 1070
+      },
+      {
+        "label": "toast-group-close-button-chart_info",
+        "disabled": false,
+        "x": 180,
+        "y": 1070
+      },
+      {
+        "label": "toast-group-close-button-coupon-notifica",
+        "disabled": false,
+        "x": 180,
+        "y": 1070
+      },
+      {
+        "label": "toast-group-close-button-charting-ad",
+        "disabled": false,
+        "x": 180,
+        "y": 1070
+      }
+    ],
+    "pine_header": [
+      {
+        "label": "99+",
+        "disabled": false,
+        "x": 978,
+        "y": 90
+      }
+    ]
+  },
+  "key_buttons": {},
+  "chart": {
+    "symbol": "CME_MINI:ES1!",
+    "resolution": "5",
+    "chartType": 19,
+    "study_count": 11
+  },
+  "replay": {
+    "available": true,
+    "started": false
+  }
+}

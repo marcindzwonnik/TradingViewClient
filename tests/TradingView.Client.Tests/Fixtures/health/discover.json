@@ -1,0 +1,69 @@
+{
+  "success": true,
+  "apis_available": 4,
+  "apis_total": 6,
+  "apis": {
+    "chartApi": {
+      "available": true,
+      "path": "window.TradingViewApi._activeChartWidgetWV.value()",
+      "methodCount": 3,
+      "methods": [
+        "_activateChart",
+        "_openSolution",
+        "_showGoToDateDialog"
+      ]
+    },
+    "chartWidgetCollection": {
+      "available": true,
+      "path": "window.TradingViewApi._chartWidgetCollection",
+      "methodCount": 13,
+      "methods": [
+        "_bottomToolbarDestroyer",
+        "_onPlanUpgradeRequiredChanged",
+        "_onChartFloatingTooltipEnabledChanged",
+        "_onChartFontFamilyChanged",
+        "_onResizeActionChanged",
+        "_recalcHasChanges",
+        "_openRestoreLayoutPaywall",
+        "_handlePhoneSize",
+        "_handlePhoneForceFullscreen",
+        "_updateActiveChartCanBeMoved",
+        "_updateLinkingGroupCharts",
+        "_computeContentBox",
+        "_updateLayout"
+      ]
+    },
+    "chartApiInstance": {
+      "available": false,
+      "path": "window.ChartApiInstance",
+      "methodCount": 0,
+      "methods": []
+    },
+    "bottomWidgetBar": {
+      "available": true,
+      "path": "window.TradingView.bottomWidgetBar",
+      "methodCount": 11,
+      "methods": [
+        "open",
+        "close",
+        "hide",
+        "show",
+        "toggleMaximize",
+        "toggleMinimize",
+        "_getWidgetConfigByNames",
+        "_updateActiveModel",
+        "_negotiate",
+        "_onHeightUpdate",
+        "_widgetsInitializedResolve"
+      ]
+    },
+    "replayApi": {
+      "available": true,
+      "path": "window.TradingViewApi._replayApi"
+    },
+    "alertService": {
+      "available": false,
+      "path": "window.TradingViewApi._alertService"
+    }
+  }
+}

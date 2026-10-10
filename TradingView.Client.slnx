@@ -1,0 +1,13 @@
+<Solution>
+  <Folder Name="/src/">
+    <Project Path="src/TradingView.Client/TradingView.Client.csproj" />
+  </Folder>
+  <Folder Name="/tests/">
+    <Project Path="tests/TradingView.Client.Tests/TradingView.Client.Tests.csproj" />
+    <Project Path="tests/TradingView.Client.IntegrationTests/TradingView.Client.IntegrationTests.csproj" />
+  </Folder>
+  <Folder Name="/docs/">
+    <File Path="docs/PLAN.md" />
+    <File Path="docs/tv-cli-contract.md" />
+  </Folder>
+</Solution>

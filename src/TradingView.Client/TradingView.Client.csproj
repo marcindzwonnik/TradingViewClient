@@ -1,0 +1,14 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <IsAotCompatible>true</IsAotCompatible>
+    <GenerateDocumentationFile>true</GenerateDocumentationFile>
+    <NoWarn>$(NoWarn);CS1591;CS1573</NoWarn>
+    <RootNamespace>TradingView.Client</RootNamespace>
+    <PackageId>TradingView.Client</PackageId>
+    <Description>Strongly typed .NET client for the tradingview-cli (`tv`) command line tool that drives TradingView Desktop over the Chrome DevTools Protocol.</Description>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Extensions.Logging.Abstractions" />
+    <InternalsVisibleTo Include="TradingView.Client.Tests" />
+  </ItemGroup>
+</Project>
